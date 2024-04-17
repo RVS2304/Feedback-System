@@ -1,0 +1,5 @@
+Department,Semester,Courses,Labs
+CSE,8,"C,English,Maths,Physics","C,English,Physics"
+CSE,2,"Python,Java,DBMS","Python,Java"
+ECE,1,"Analog Electronics,Digital Electronics,Maths,Signals and Systems","Analog Electronics,Signals and Systems"
+ECE,2,"Communication Systems,Control Systems,Embedded Systems","Control Systems"

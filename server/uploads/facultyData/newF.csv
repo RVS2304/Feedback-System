@@ -1,0 +1,8 @@
+Name,Password,Department,CoursesAssigned
+C F,password,CSE,"C,Python"
+Eng F,password,CSE,"English"
+Maths F,password,CSE,"Maths"
+Physics F,password,CSE,"Physics"
+F2,password,CSE,"DBMS"
+F3,password,ECE,"Analog Electronics,Communication SystemsMaths"
+F4,password,ECE,"Communication Systems,Signals and Systems"
