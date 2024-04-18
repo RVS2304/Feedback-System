@@ -1,8 +1,8 @@
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import './FeedbackForm.css';
-import axios from 'axios';
 
 function FeedbackForm({ courses, labs, faculties, questions, studentID }) {
    // console.log(questions);
@@ -75,22 +75,24 @@ function FeedbackForm({ courses, labs, faculties, questions, studentID }) {
                <center><h1>Feedback Form</h1></center>
                <table>
                   <thead>
-                     <tr>
-                        <th></th>
+                     <tr >
+                        <label style={{float:'right'}}><th></th>
                         {courses.map((course, index) => (
-                           <th key={index}>{course}</th>
-                        ))}
+                           <th key={index} className='subject-names'>{course}</th>
+                        ))}</label>
                      </tr>
                   </thead>
                   <tbody>
                      {questions.map((question, questionIndex) => (
                         <tr key={questionIndex}>
-                           <td>{questionIndex + 1}. {question}</td>
-                           {courses.map((course, courseIndex) => (
-                              <td key={courseIndex}>
+                         <label className='table-row'>
+                        <label className='questions'> <td><label className='rating-row'>{questionIndex + 1}. {question}</label></td></label>
+                          <label className='dropdowns'> {courses.map((course, courseIndex) => (
+                              <td key={courseIndex} >
                                  <Form.Control
                                     as="select"
                                     value={feedback[questionIndex][courseIndex]}
+                                    className='rating'
                                     onChange={(e) => {
                                        const newFeedback = [...feedback];
                                        newFeedback[questionIndex][courseIndex] = e.target.value;
@@ -106,7 +108,8 @@ function FeedbackForm({ courses, labs, faculties, questions, studentID }) {
                                     <option value="5">5</option>
                                  </Form.Control>
                               </td>
-                           ))}
+                           ))}</label>
+                         </label>
                         </tr>
                      ))}
                   </tbody>
@@ -118,8 +121,9 @@ function FeedbackForm({ courses, labs, faculties, questions, studentID }) {
                   <div key={labIndex}>
                      <label> Comment on {lab} Lab:</label>
                      <Form.Control
-                        as="input"
+                        as="textarea"
                         type='text'
+                        className='subject-textarea'
                         value={labComments[labIndex]}
                         onChange={(e) => {
                            const newComments = [...labComments];
@@ -137,8 +141,9 @@ function FeedbackForm({ courses, labs, faculties, questions, studentID }) {
                   <div key={facultyIndex}>
                      <label> Comment on {faculty.name}:</label>
                      <Form.Control
-                        as="input"
+                        as="textarea"
                         type='text'
+                        className='subject-textarea'
                         value={facultyComments[facultyIndex]}
                         onChange={(e) => {
                            const newComments = [...facultyComments];

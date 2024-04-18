@@ -1,9 +1,12 @@
+
+
 .bg-icon {
     height: 100%;
     width: 100%;
     position: absolute;
     object-fit: cover;
     display: none;
+
     max-width: 100%;
 }
 
@@ -12,12 +15,14 @@
     height: 100%;
     position: fixed;
     overflow: hidden;
+    border: none;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
     background-image: url(/public/studentloginbg.jpg);
+    filter: brightness(90%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -32,12 +37,14 @@
     letter-spacing: 0.1em;
     font-weight: 400;
     font-family: inherit;
+    color: rgb(249, 224, 191);
     z-index: 1;
 }
 
 .student-login-wrapper {
     align-self: center;
     display: flex;
+    
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
@@ -53,6 +60,8 @@
 .roll-number {
     width: 100%;
     letter-spacing: 0.1em;
+    font-size: large;
+    color:rgb(205, 203, 203);
     display: inline-block;
 }
 
@@ -60,10 +69,16 @@
     width: 100%;
     height: 2.5rem;
     padding: 0.5rem;
-    font-size: larger;
-    border-radius: 8px;
+    font-size: large;
+    border-radius: 6px;
     font-family: var(--font-alike);
+    outline:none;
+    border: none;
     background-color: var(--color-gainsboro);
+}
+
+.student-input-rollno::placeholder{
+    font-size: medium;
 }
 
 .roll-number-parent {
@@ -129,9 +144,9 @@
     width: 25rem;
     border-radius: var(--br-6xl);
     background-color: var(--color-gray-200);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 40px 40px 40px rgba(0, 0, 0,0.5);
     backdrop-filter: blur(64px);
-    border: 0.5px solid var(--color-silver-200);
+    border: 0.2px solid var(--color-silver-200);
     box-sizing: border-box;
     flex-direction: column;
     justify-content: flex-start;

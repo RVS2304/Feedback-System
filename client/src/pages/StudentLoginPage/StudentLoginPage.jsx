@@ -39,21 +39,23 @@ const StudentLoginPage = () => {
         <img className="bg-icon" alt="" src="/studentloginbg.jpg" />
         <div className="student-rectangle-parent">
           <div className="student-login-wrapper">
-            <h2 className="student-login-text">Login</h2>
+            <h2 className="student-login-text">LOGIN</h2>
           </div>
           <div className="roll-number-parent">
-            <div className="roll-number">Roll Number</div>
+            <div className="roll-number">Roll Number :</div>
             <input
               type="text"
               name="rollnumber"
               id="rollNumber"
               className="student-input-rollno"
+              placeholder="Enter your roll number"
               onChange={(e) => setRollNumber(e.target.value)} 
               value={rollNumber} 
               required
             />
           </div>
           <SubmitButton />
+          
         </div>
       </div>
     </form>

@@ -12,9 +12,10 @@
     cursor: pointer;
     border: 0;
     padding: 0.144rem 0.7rem;
-    background-color: var(--color-darkslategray-200);
+    background-color: var(--color-gray);
     flex-direction: row;
     z-index: 2;
+    border-radius: 10px;
 }
 
 .submit:hover {
