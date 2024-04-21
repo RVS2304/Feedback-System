@@ -38,7 +38,7 @@ const StudentDashboard = () => {
   const toggleMenuOptions = () => {
     setMenuOptionsVisible(!menuOptionsVisible);
     console.log("Menubar Clicked");
-  };
+  };  
 
   const toggleSidebar = () => {
     setSidebarExpanded(!sidebarExpanded);
@@ -102,7 +102,7 @@ const StudentDashboard = () => {
   return (
     <div className="student-dashboard">
       <header className={`student-navbar-parent ${sidebarExpanded ? 'sidebar-expanded' : ''}`}>
-        <div className="student-dashboard-text">Student ID: {truncatedHash}</div>
+        <div className="student-dashboard-text">Student ID: <span>{truncatedHash}</span></div>
       </header>
       <Menubar toggleMenuOptions={toggleMenuOptions} toggleSidebar={toggleSidebar} />
       <div className="feedback-form-overlay">

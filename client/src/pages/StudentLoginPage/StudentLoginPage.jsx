@@ -1,6 +1,5 @@
 import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SubmitButton from "../../SharedComponents/SubmitButton/SubmitButton";
 import "../../components/Student/StudentLogin.css";
 
 const StudentLoginPage = () => {
@@ -54,7 +53,7 @@ const StudentLoginPage = () => {
               required
             />
           </div>
-          <SubmitButton />
+          <button type="submit" className="btn41-43 btn-42" >Submit</button>
           
         </div>
       </div>

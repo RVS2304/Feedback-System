@@ -12,6 +12,15 @@
   max-height: 100%;
   object-fit: cover;
 }
+
+.login-options{
+ 
+  z-index: 1000;
+  width: 110px;
+  background-color:#c84646;
+  border-radius: 5px;
+  height: 180px;
+}
 .admin-login {
   width: 100%;
   height: 100vh;
@@ -30,27 +39,33 @@
 
 .login-options-container {
   background-color: none;
-  border: 1px solid black;
-  border-radius: 5px;
+  /* border: 1px solid black; */
+  /* border-radius: 5px; */
+  margin-top: 10%;
+  width: 100%;
 }
 
 .login-option-button {
   width: 100%;
   color: white;
   font-family:  var(--font-alike);
-  background-color: #df6161;
+  background-color: transparent;
   border: none;
+  outline: none;
   border-radius: 5px;
-  height: 1.5rem;
+  height: 2.3rem;
   flex: 1;
+  
   position: relative;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .login-option-button:hover {
   background-color: white;
   color: #df6161;
+  box-shadow: inset 0px -1px 10px rgb(155, 148, 148),
+  inset 0px 1px 10px rgb(143, 134, 134);
 }
 
 .login-option-button:active {

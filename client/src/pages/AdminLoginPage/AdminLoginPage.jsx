@@ -28,13 +28,13 @@ const AdminLogin = () => {
           <h1 className="login-text">Login</h1>
         </div>
         <div className="input-parent">
-          <div className="text"><label htmlFor="username">User Name</label></div>
+          <div className="text"><label htmlFor="username">User Name :</label></div>
           <div className="user-input">
             <input type="text" name="username" value={username} onChange={(e) => setUsername(e.target.value)} id="username" className="userinput" required />
           </div>
         </div>
         <div className="input-parent">
-          <div className="text"><label htmlFor="userpassword">Password</label></div>
+          <div className="text"><label htmlFor="userpassword">Password :</label></div>
           <div className="user-input">
             <input type="password" name="userpassword" value={password} onChange={(e) => setPassword(e.target.value)} id="userpassword" className="userinput" required />
           </div>

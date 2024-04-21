@@ -1,5 +1,4 @@
 import React from 'react'
-
 function SubmitButton() {
   return (
     <div className="submit-wrapper">

@@ -27,10 +27,14 @@
     font-size: 2rem;
     height: 4rem;
     display: inline;
+    font-weight: 500;
     flex-shrink: 0;
     white-space: nowrap;
     max-width: 100%;
     z-index: 2;
+  }
+  .student-dashboard-text span{
+    color: rgb(244, 237, 198);
   }
   
   .student-navbar-parent.sidebar-expanded {
@@ -45,6 +49,8 @@
   }
   
   .student-navbar-parent {
+    background: rgb(38,36,36);
+    background: linear-gradient(90deg, rgba(38,36,36,1) 0%, rgba(92,88,88,1) 51%, rgba(46,46,46,1) 100%);
     width: 100%;
     height: 5rem;
     align-self: stretch;

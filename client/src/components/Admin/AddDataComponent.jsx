@@ -177,7 +177,7 @@ function AddDataComponent() {
         <input type="file" id="file" accept='.csv' onChange={handleFileChange} required />
       </div>
       <button onClick={handleSubmit}>Upload File</button>    
-      <br /><br /><br />
+      <br /><br />
       { uploadedStudentFiles.length > 0 && (
         <div>
           <h3><u>Uploaded Student Files</u></h3>
@@ -215,7 +215,7 @@ function AddDataComponent() {
         <input type="file" id="file" accept='.csv' onChange={handleCourseFileChange} required />
       </div>
       <button onClick={handleCourseSubmit}>Upload File</button>
-      <br /><br /><br />
+      <br /><br />
       { uploadedCourseFiles.length > 0 && (
         <div>
           <h3><u>Uploaded Course Files</u></h3>
@@ -230,7 +230,7 @@ function AddDataComponent() {
     <div className="add-data-component">
       <div className="input-container">
       <h3>Change Feedback Questions</h3>
-        <label htmlFor="file">Upload CSV File:</label>
+       <label htmlFor="file">Upload CSV File:</label>
         <input type="file" id="file" accept='.csv' onChange={handleCourseFileChange} required />
       </div>
       <button onClick={handleCourseSubmit}>Upload File</button>

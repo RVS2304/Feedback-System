@@ -26,6 +26,8 @@
   min-width: 7.813rem;
   z-index: 2;
 }
+
+
 .login-wrapper {
   display: flex;
   flex-direction: row;
@@ -33,6 +35,7 @@
   justify-content: flex-start;
   padding: 0 var(--padding-55xl) 0 var(--padding-53xl);
 }
+
 .text,
 .userinput {
   position: relative;
@@ -67,14 +70,16 @@
   align-self: stretch;
   flex-direction: row;
   padding: 0 0 0 var(--padding-10xs);
+ 
 }
 .input-parent {
   width: 16.063rem;
   flex-direction: column;
   gap: 0.319rem;
+ 
 }
 
-.userinput1 {
+.userinput{
   align-self: stretch;
   height: 1.875rem;
   border-radius: var(--br-xl);

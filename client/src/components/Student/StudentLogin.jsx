@@ -22,7 +22,7 @@ const StudentLogin = ({dashboardRoute}) => {
         </div>
         <div className="roll-number-parent">
           <div className="roll-number">Roll Number</div>
-          <input type="text" name="rollnumber" id="rollNumner" className="student-input-rollno" required />
+          <input type="text" name="rollnumber" id="rollNumber" className="student-input-rollno" required />
         </div>
         <SubmitButton />
         </div>

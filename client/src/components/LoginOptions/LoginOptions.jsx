@@ -28,8 +28,8 @@ const LoginOptions = ({visible}) => {
     return (
         <div className={`login-options ${visible ? "visible" : ""}`}>
 
-            <div className='login-options-container'>
-            <Link to='/student-login'><button onClick={handleStudentLogin} className='login-option-button'>Student</button></Link>
+            <div className='login-options-container' style={{marginTop:'0'}}>
+            <Link to='/student-login'><button onClick={handleStudentLogin} className='login-option-button' >Student</button></Link>
             </div>
             <div className='login-options-container'>
             <Link to='/faculty-login'><button onClick={handleFacultyLogin} className='login-option-button'>Faculty</button></Link>    

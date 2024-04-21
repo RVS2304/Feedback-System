@@ -1,5 +1,5 @@
+import './AdminLogin.css';
 import "./LoginComponent.css";
-
 const Login = () => {
   return (
     <form className="login-container-parent">

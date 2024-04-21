@@ -22,6 +22,7 @@ const Menubar = ({toggleMenuOptions}) => {
     <div className={`menubar-parent ${expanded ? "expanded": ""}`}>
       <div className="menubar-frame-wrapper">
         <div className="user-parent">
+          <div className="icon-div">
           <img
             className="menu-icon"
             loading="lazy"
@@ -29,6 +30,8 @@ const Menubar = ({toggleMenuOptions}) => {
             src="/menu.png"
             onClick={handleMenuClick}
           />
+          {expanded && <span className="profile-text">Menu</span>}
+          </div>
           <div className="icon-div">
             <img className="user-icon" loading="lazy" alt="" src="/form.png" />
             {expanded && <span className="profile-text">Feedback Form</span>}

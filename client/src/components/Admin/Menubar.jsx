@@ -1,6 +1,5 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import "./Menubar.css";
 
 const Menubar = ({toggleMenuOptions, handleAddDataClick}) => {
@@ -29,6 +28,7 @@ const Menubar = ({toggleMenuOptions, handleAddDataClick}) => {
             src="/menu.png"
             onClick={handleMenuClick}
           />
+          
           <div className="icon-div">
             <img className="user-icon" loading="lazy" alt="" src="/user.png" />
             {expanded && <span className="profile-text">Profile</span>}

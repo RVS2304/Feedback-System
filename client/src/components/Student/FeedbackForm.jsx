@@ -73,10 +73,11 @@ function FeedbackForm({ courses, labs, faculties, questions, studentID }) {
          <form onSubmit={handleSubmit}>
             <div>
                <center><h1>Feedback Form</h1></center>
+               
                <table>
                   <thead>
                      <tr >
-                        <label style={{float:'right'}}><th></th>
+                        <label className='subject-names-group'><th></th>
                         {courses.map((course, index) => (
                            <th key={index} className='subject-names'>{course}</th>
                         ))}</label>

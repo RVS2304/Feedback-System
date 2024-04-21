@@ -61,7 +61,7 @@
     width: 100%;
     letter-spacing: 0.1em;
     font-size: large;
-    color:rgb(205, 203, 203);
+    color:rgb(251, 242, 230);
     display: inline-block;
 }
 
@@ -74,12 +74,20 @@
     font-family: var(--font-alike);
     outline:none;
     border: none;
-    background-color: var(--color-gainsboro);
+    background-color: rgb(253, 246, 236);
 }
 
 .student-input-rollno::placeholder{
     font-size: medium;
 }
+.student-input-rollno::placeholder::after{
+    background-color: rgb(253, 246, 236);
+}
+.student-input-rollno::placeholder::before{
+    border-color: rgb(253, 246, 236);
+    
+}
+
 
 .roll-number-parent {
     width: 100%;
@@ -159,6 +167,58 @@
     color: var(--color-white);
     font-family: var(--font-alice);
 }
+
+.btn41-43 {
+    padding: 0.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    width: 10rem;
+    font-size: 1.3rem;
+    background: transparent;
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius:10px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .btn-42 {
+    border: 2px solid rgb(249, 224, 191);
+    z-index: 1;
+    border-radius:10px;
+    font-weight: 600;
+    color: rgb(249, 224, 191);
+  }
+  
+  .btn-42:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius:10px;
+    background: rgb(249, 224, 191);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-42:hover {
+    color: rgb(0, 0, 0);
+    border-radius:10px;
+  }
+  
+  .btn-42:hover:after {
+    top: 0;
+    border-radius:8px;
+    height: 100%;
+  }
+  
+  .btn-42:active {
+    top: 2px;
+    border-radius:8px;
+  }
 
 @media screen and (max-width: 750px) {
     .student-login-text {
