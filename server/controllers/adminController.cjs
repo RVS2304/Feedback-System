@@ -18,10 +18,9 @@ const saveAdmin = async (req, res) => {
 
         await admin.save();
 
-        res.send({ status: 200, success: true, msg: "Admin data saved" });
-
+        console.log("Admin data saved");
     } catch (error) {
-        res.send({ status: 400, success: false, msg: error.message });
+        console.error("Error saving admin data:", error);
     }
 }
 
