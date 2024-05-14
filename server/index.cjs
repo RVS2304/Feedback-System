@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended:true}));
 
 const PORT = 5000;
 
-mongoose.connect('mongodb://127.0.0.1:27017/testDB')
+mongoose.connect('mongodb://127.0.0.1:27017/DBNew')
 .then( () => { console.log("Database Connected Successfully!!") })
 .catch( (err) => { console.log("Error while connecting to Database" + err) });
 
@@ -30,6 +30,15 @@ app.use('/faculty', facultyRoute);
 app.use('/hod', hodRoute);
 app.use('/admin', adminRoute);
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
     console.log(`App is Running at ${PORT} `);
-})
+
+    try {
+        const { saveAdmin } = require('./controllers/adminController.cjs');
+    
+        await saveAdmin();
+        console.log('Admin data saved successfully.');
+      } catch (error) {
+        console.error('Error saving admin data:', error);
+      }
+});
