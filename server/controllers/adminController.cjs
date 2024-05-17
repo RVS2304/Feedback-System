@@ -11,6 +11,13 @@ const saveAdmin = async (req, res) => {
         password = 'password';
         // const hashedPassword = await bcrypt.hash(password, 10);
 
+        // Check if admin already exists
+        const existingAdmin = await Admin.findOne({ Name: username });
+        if (existingAdmin) {
+            console.log("Admin already exists");
+            return;
+        }
+
         const admin = new Admin({
             Name: username,
             Password: password,
@@ -23,6 +30,7 @@ const saveAdmin = async (req, res) => {
         console.error("Error saving admin data:", error);
     }
 }
+
 
 const authenticate = async (req, res) => {
     try {
